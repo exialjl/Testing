@@ -1,4 +1,6 @@
 import pandas as pd
+pdbs = pd.read_csv("BS.csv")
+print(pdbs)
 
-df = pd.read_csv("BS.csv")
-
+pdratio = pd.read_csv("RATIO.csv")
+print(pdratio)
