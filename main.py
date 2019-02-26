@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import pandas as pd
 
 # df = pd.read_csv("BS.csv")
@@ -7,11 +7,11 @@ import pandas as pd
 app = Flask(__name__)
 @app.route("/")
 def main():
-   return app.send_static_file("index.html")
+   return render_template("index.html")
 
 @app.route("/about/")
 def about():
-    return app.send_static_file("about.html")
+    return render_template("about.html")
 
 if __name__ == "__main__":
-  app.run()
+  app.run(port=8080,debug=True)
